@@ -25,13 +25,13 @@ namespace OWASP.WebGoat.NET
 	    protected void CreateAccountButton_Click(object sender, EventArgs e)
 	    {
 	        MembershipCreateStatus createStatus;
-	
+	        
 	        MembershipUser newUser = 
 	             Membership.CreateUser(Username.Text, Password.Text,
 	                                   Email.Text, passwordQuestion,
 	                                   SecurityAnswer.Text, true,
 	                                   out createStatus);
-	                                   
+	                 int d = 5/Username.Length;                  
 			if(newUser == null)
 				Console.WriteLine("New User is null!");
 				
