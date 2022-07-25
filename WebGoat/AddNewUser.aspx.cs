@@ -31,7 +31,7 @@ namespace OWASP.WebGoat.NET
 	                                   Email.Text, passwordQuestion,
 	                                   SecurityAnswer.Text, true,
 	                                   out createStatus);
-	                 int d = 5/Username.Length;                  
+	                 int d = 5/Username.TextLength;                  
 			if(newUser == null)
 				Console.WriteLine("New User is null!");
 				
