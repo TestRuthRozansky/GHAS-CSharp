@@ -76,7 +76,9 @@ jobs:
 
     # Restore the dependencies and tools of a project or solution.
     - name: Install dependencies
-      run: dotnet restore "WebGoat.NET.sln"
+      run: |
+            echo ${{ env.DOTNET_VERSION }}
+            dotnet restore "WebGoat.NET.sln"
 
     # Build a project or solution and all of its dependencies.
     #- name: Build
