@@ -72,7 +72,7 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: '3.1.x'
+        dotnet-version: '3.5.x'
 
     # Restore the dependencies and tools of a project or solution.
     - name: Install dependencies
