@@ -79,8 +79,12 @@ jobs:
       run: dotnet restore "WebGoat.NET.sln"
 
     # Build a project or solution and all of its dependencies.
-    - name: Build
-      run: dotnet build --configuration Release --no-restore
-    
+    #- name: Build
+    #  run: dotnet build --configuration Release --no-restore
+    - name: Build dotnet apps
+      working-directory: ./WebGoat
+      run: |
+            dotnet build WebGoat.NET.csproj
+            
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
